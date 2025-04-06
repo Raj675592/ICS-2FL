@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="log.ico" type="image/x-icon" id="log">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="des1.css">
+</head>
+<body>
+ 
+    <div id ="container">
+      <img src="logo.png" alt="Logo" class="logo">
+      
+      
+     
+
+    </div>
+
+
+   <div class="form-section">
+      
+      <form id="feedbackForm" action="/post" method="post">
+        <input type="text" name="name" placeholder="Name" id="name" required><br>
+        <input type="email" name="email" placeholder="Email" id="email" required><br>
+        <input type="text" name="rollno" placeholder="Roll Number" id="rollno" required><br>
+        <textarea name="feedback" placeholder="Your Feedback" id="feedback" required></textarea><br>
+        <input type="number" name="rating" placeholder="Rating (1-5)" id="rating" min="1" max="5" required><br>
+        <label>
+          <input type="checkbox" name="isAnonymous" id="isAnonymous"> Submit anonymously
+        </label><br>
+        <button type="submit">Submit</button>
+      </form>
+      
+    </div>
+  </div>
+  
+  <div id="successMessage" style="display: none; color: green;">Thank you for your feedback!</div>
+</body>
+</html>
+
