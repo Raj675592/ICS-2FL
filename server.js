@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(__dirname));
 app.use(express.urlencoded({ extended: true }));
 
-// MongoDB Atlas URI (replace <username>, <password>, <cluster>, and <dbname> with actual values)
+
 const MONGO_URI = process.env.MONGO_URI ;
 
 mongoose.connect(MONGO_URI, {
@@ -20,7 +20,7 @@ mongoose.connect(MONGO_URI, {
   console.error('MongoDB connection error:', err);
 });
 
-// Feedback schema
+
 const feedbackSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -31,7 +31,7 @@ const feedbackSchema = new mongoose.Schema({
 });
 const Feedback = mongoose.model("Feedback", feedbackSchema);
 
-// Appointment schema
+
 const appointmentSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -45,11 +45,11 @@ const Appointment = mongoose.model("Appointment", appointmentSchema);
 
 // Routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // For appointment form
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/review', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index1.html')); // For feedback form
+  res.sendFile(path.join(__dirname, 'index1.html')); 
 });
 
 app.post('/appointment', async (req, res) => {
