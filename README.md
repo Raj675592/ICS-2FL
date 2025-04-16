@@ -18,7 +18,7 @@
 ## Deployment: GitHub Pages and render
 # How to Use
 ## Clone the repository:
-### git clone https://github.com/Raj675592/ICS2.git
+### git clone https://github.com/Raj675592/ICS-2FL.git
 ## Navigate to the project directory:
 ### cd ICS2
 # Open index.html in a browser to view the website.
